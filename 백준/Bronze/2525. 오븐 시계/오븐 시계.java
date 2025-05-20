@@ -22,7 +22,7 @@ public class Main {
 			min = A*60 + B + C; //조리 시간 연산.
 			h = min/60; //시
 			m = min%60; //분
-			if(h>=24) {
+			if(h>=24) { // 기존 코드에서 h>=23을 수정.
 				h = h-24;
 			}
 		}
