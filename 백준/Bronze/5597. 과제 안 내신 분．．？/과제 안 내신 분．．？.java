@@ -17,11 +17,11 @@ public class Main {
 		int arr[] = new int[30];
 		
 		for(int i=0; i<28; i++) {
-			arr[Integer.parseInt(br.readLine())-1] = 1;
+			arr[Integer.parseInt(br.readLine())-1] = 1;   // 28명의 출석 번호만 받고 1로 받음 표시.
 		}
 		
 		for(int i=0; i<arr.length; i++) {
-			if(arr[i]!=1) {
+			if(arr[i]!=1) {		// 출석번호가 확인되지 않으면
 				bw.write(i+1 + " ");
 			}
 		}
