@@ -32,6 +32,7 @@ public class Main {
 			int I = Integer.parseInt(st2.nextToken());
 			int J = Integer.parseInt(st2.nextToken());
 			
+			// for 문을 2개로 나눠서 j, k 따로 진행시 역순으로 안바뀐다...
 			for(int j=I-1, k=J-1; j<k; j++, k--) {
 					int ex = arr[j];
 					arr[j] = arr[k];
