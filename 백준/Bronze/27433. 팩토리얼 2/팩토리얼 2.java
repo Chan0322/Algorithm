@@ -7,9 +7,11 @@ import java.io.OutputStreamWriter;
 public class Main {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
-		factorial();
+//		factorial();
+		factorial2();
 	}
 
+	/*
 	public static void factorial() throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -25,5 +27,25 @@ public class Main {
 		bw.write(res+"");
 		bw.close();
 		br.close();
+	}
+	*/
+	
+	// 재귀
+	public static void factorial2() throws NumberFormatException, IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		
+		int n = Integer.parseInt(br.readLine());
+		
+		// 팩토리얼 계산
+		long res = facto(n);
+		
+		bw.write(res+"");
+		bw.close();
+		br.close();
+	}
+	public static long facto(int n) {
+		if(n<=1) return 1;
+		return n * facto(n-1);
 	}
 }
